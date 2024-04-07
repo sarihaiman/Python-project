@@ -1,26 +1,24 @@
 from http.client import HTTPException
 from app.models.budgetManagment import budgetManagment as budget
-from app.Services.db import budgetManagment
+from app.Services.db import Managment
 
 async def addToBudget(budgetManagment: budget):
-    print(budgetManagment)
-    a={"expenses":1 , "revenues":1,"userId": 1}
-    print(a)
-    budgetManagment.insert_one(a)
+    Managment.insert_one({"userId": budgetManagment.userId,"expenses": budgetManagment.expenses , "revenuesssss": budgetManagment.revenuesssss})
     return "addToBudget"
 
 async def updateBudget(budgetManagment: budget):
+    print(budgetManagment)
     myquery = {"userId": budgetManagment.userId}
-    newvalues = {"$set": {"expenses": budgetManagment.expenses, "revenues": budgetManagment.revenues}}
-    budgetManagment.update_one(myquery, newvalues)
+    newvalues = {"$set": {"expenses": budgetManagment.expenses, "revenuesssss": budgetManagment.revenuesssss}}
+    Managment.update_one(myquery, newvalues)
     return "updateBudget"
 
 async def getBudget(UserId):
-    for user in budgetManagment.find({"userId" :int(UserId)}):
+    for user in Managment.find({"userId" :int(UserId)}):
         return user
 
 async def deleteBudget(userId):
-    budgetManagment.delete_one({"userId":int(userId)})
+    Managment.delete_one({"userId":int(userId)})
     return "deleteBudget"
 
 # async def get_all_users():

@@ -1,10 +1,10 @@
 from http.client import HTTPException
-
 from app.models.user import User
 from app.Services.db import users
 
 async def login(user: User):
     user=users.find_one({"name":user.name , "password":user.password})
+    print("!!!!!!!!!!!!!!!!!!!!!!!!")
     return user
 
 async def signUp(user: User):

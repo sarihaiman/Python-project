@@ -9,7 +9,7 @@ budgetManagment_Router = APIRouter()
 @budgetManagment_Router.get('')
 async def getBudget(userid):
      a = await budgetManagment_crud.getBudget(userid)
-     return { "userId": a['userId'],  "expenses": a['expenses'],"revenues": a['revenues'] }
+     return {  "expenses": a['expenses'] , "revenues" : a['revenuesssss'], "userId": a['userId']}
 
 @budgetManagment_Router.post('')
 async def addToBudget(budgetManagment: budget):
@@ -21,10 +21,11 @@ async def addToBudget(budgetManagment: budget):
 
 @budgetManagment_Router.put('')
 async def updateBudget(budgetManagment: budget):
-    try:
-        await budgetManagment_crud.updateBudget(budgetManagment)
-    except:
-        raise HTTPException(status_code=400, detail="oops... an error updateBudget")
+    # try:
+    print(budgetManagment)
+    await budgetManagment_crud.updateBudget(budgetManagment)
+    # except:
+    #     raise HTTPException(status_code=400, detail="oops... an error updateBudget")
     return f"updateBudget"
 
 @budgetManagment_Router.delete('')
@@ -34,7 +35,6 @@ async def deleteBudget(userid):
     except:
         raise HTTPException(status_code=400, detail="oops... an error deleteBudget")
     return f"deleteBudget"
-
 
 # @budgetManagment_Router.get('/all')
 # async def get_all_users():
