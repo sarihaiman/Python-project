@@ -8,6 +8,7 @@ user_router = APIRouter()
 
 @user_router.post('/login')
 async def login(user: User):
+    """Routing that allows an existing user to log in to the system."""
     thisUser:User
     try:
           thisUser=await User_crud.login(user)
@@ -19,6 +20,7 @@ async def login(user: User):
 
 @user_router.post('/signUp')
 async def signUp(user: User):
+    """Routing that allows a new user to register for the system."""
     try:
         await User_crud.signUp(user)
     except:
@@ -27,6 +29,7 @@ async def signUp(user: User):
 
 @user_router.put('')
 async def updateUser(user: User):
+    """Routing that enables editing details of a specific user."""
     try:
         await User_crud.updateUser(user)
     except:
