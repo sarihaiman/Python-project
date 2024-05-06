@@ -1,5 +1,4 @@
-from http.client import HTTPException
-from fastapi import APIRouter
+from fastapi import APIRouter,HTTPException
 from pydantic import ValidationError
 from app.Services import budgetManagment_crud
 from app.models.budgetManagment import budgetManagment as budget
@@ -10,7 +9,8 @@ budgetManagment_Router = APIRouter()
 async def getBudget(userid):
     """Routing that allows the user to access details about their expenses and revenues."""
     a = await budgetManagment_crud.getBudget(userid)
-    return { "expenses": a['expenses'] , "revenues" : a['revenues'], "userId": a['userId']}
+    if(a!=None):
+        return { "expenses": a['expenses'] , "revenues" : a['revenues'], "userId": a['userId']}
 
 @budgetManagment_Router.post('')
 async def addToBudget(budgetManagment: budget):
@@ -38,8 +38,3 @@ async def deleteBudget(userid):
     except Exception:
         raise HTTPException(status_code=400, detail="oops... an error deleteBudget")
     return f"deleteBudget"
-
-# @budgetManagment_Router.get('dsfg')
-# async def getBudget2():
-#      a = await budgetManagment_crud.getBudget2()
-#      print(a)

@@ -3,5 +3,5 @@ from pydantic import BaseModel
 
 class budgetManagment(BaseModel):
     expenses: int
-    revenuesssss : int
+    revenues : int
     userId:int

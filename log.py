@@ -1,32 +1,28 @@
+import datetime
 
-# def log(original_func):
-#     def wrapper(*args, **kwargs):
-#         print(f'Running function {original_func.__name__} with args {args} and kwargs {kwargs}')  # print func name and its params
-#         original_func(*args, **kwargs)  # original function execution
-#         print(f'{original_func.__name__} is Done')  # printing that function is done
-#
-#     return wrapper  # return edited function that logs
+def server_log_decorator(log_file):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            # קבלת השעה והתאריך הנוכחי
+            current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # נסיון לקרוא לפונקציה
+            try:
+                result = func(*args, **kwargs)
+                success = True
+            except Exception as e:
+                result = str(e)
+                success = False
 
-# def log(original_func):
-#     def wrapper(*args):
-#         print(f'Running function {original_func.__name__} with args {args}')
-#         original_func(*args)
-#         print(f'{original_func.__name__} is Done')
-#     return wrapper
+            # פתיחת קובץ לוג לכתיבה
+            with open(log_file, 'a') as f:
+                # כתיבת הרשומה לקובץ הלוג
+                f.write(f"Function: {func.__name__}, Time: {current_time}, Success: {success}\n")
+            return result
+        return wrapper
+    return decorator
 
-import logging
 
-def get_logger(log_file_name, log_sub_dir=""):
-    """ Creates a Log File and returns Logger object """
 
-    # Build Log File Full Path
-    logPath = log_file_name if os.path.exists(log_file_name) else os.path.join(log_dir, (str(log_file_name) + '.log'))
-
-    # Create logger object and set the format for logging and other attributes
-    logger = logging.Logger(log_file_name)
-
-    # Return logger object
-    return logger
 
 
 
