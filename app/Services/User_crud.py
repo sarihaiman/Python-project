@@ -5,13 +5,12 @@ from app.Services.db import users
 async def login(user: User):
     """The option for an existing user to log in to the system."""
     user=users.find_one({"name":user.name , "password":user.password})
-    print("!!!!!!!!!!!!!!!!!!!!!!!!")
     return user
 
 async def signUp(user: User):
     """Adding a new user to the system."""
     users.insert_one({"id": user.id,"name":user.name , "password":user.password})
-    return f"sighUp"
+    return "sighUp"
 
 async def updateUser(user: User):
     """Editing the details for a specific user."""

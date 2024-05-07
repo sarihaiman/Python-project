@@ -21,6 +21,7 @@ async def updateBudget(budgetManagment: budget):
         myquery = {"userId": budgetManagment.userId}
         newvalues = {"$set": {"expenses": budgetManagment.expenses, "revenues": budgetManagment.revenues}}
         Managment.update_one(myquery, newvalues)
+        return "updateBudget"
     else:
         raise "userId found"
 

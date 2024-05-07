@@ -1,35 +1,38 @@
-# import pytest
-# from app.Router.budgetManagment_Router import budgetManagment_Router
-# from app.Services import budgetManagment_crud as a
-# from app.models.budgetManagment import budgetManagment as budget
-#
-# # @pytest.mark.int
-# # def test_add():
-# # assert a.addToBudget({"userId": 1,"expenses": 23 , "revenuesssss": 65})=="addToBudget"
-#
-# def test_add():
-#     print(add(2,3))
-#     assert add(2,3) == 5
-#
-# def add(c,x):
-#     return c+x
+from bson import ObjectId
+from app.Services import budgetManagment_crud as a
+from app.models.budgetManagment import budgetManagment
 
-# import pytest
-# from app.Services import budgetManagment_crud as budgetFunc
-# from app.models.budgetManagment import budgetManagment as Budget
-#
-# def sss(x):
-#     return x
-#
-# # @pytest.mark.skip(reason='Not implemented yet')
-# # @pytest.mark.int
-# def test_add():
-#      # b.revenues = 700
-#      # b.userId = 7410
-#      # b.expenses = 78787
-#      b = {"userId": 999, "expenses": 700, "revenues": 600}
-#      assert budgetFunc.addToBudget(b) == "addToBudget"
-#
-#
-# def test_hh():
-#     assert sss(78) == 78
+import unittest
+import asyncio
+class TestHH(unittest.TestCase):
+    def test_addToBudget(self):
+        budget = budgetManagment(userId=542, expenses=700, revenues=600)
+        result = asyncio.run(a.addToBudget(budget))
+        assert result == "addToBudget"
+
+    def test_getBudget(self):
+        result = asyncio.run(a.getBudget(4))
+        assert result == {'_id': ObjectId('66388a6ad500a9e172a3896c'), 'expenses': 1, 'revenues': 0, 'userId': 4}
+
+    def test_UpdateBudget(self):
+        budget = budgetManagment(userId=6, expenses=40, revenues=60)
+        result = asyncio.run(a.updateBudget(budget))
+        assert result == "updateBudget"
+
+    def test_DeleteBudget(self):
+        result = asyncio.run(a.deleteBudget(4))
+        assert result =="deleteBudget"
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+
+
+
+
+
+
+
+
