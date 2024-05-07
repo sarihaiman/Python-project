@@ -12,3 +12,10 @@ Function: addToBudget, Time: 2024-05-06 18:18:10, Success: True
 Function: addToBudget, Time: 2024-05-06 18:18:11, Success: True
 Function: addToBudget, Time: 2024-05-06 18:18:11, Success: True
 Function: addToBudget, Time: 2024-05-06 18:21:14, Success: True
+Function: getBudget, Time: 2024-05-07 18:17:44, Success: True
+Function: getBudget, Time: 2024-05-07 18:17:47, Success: True
+Function: getBudget, Time: 2024-05-07 18:19:10, Success: True
+Function: getBudget, Time: 2024-05-07 18:19:13, Success: True
+Function: getBudget, Time: 2024-05-07 18:19:15, Success: True
+Function: getBudget, Time: 2024-05-07 18:20:01, Success: True
+Function: getBudget, Time: 2024-05-07 18:20:05, Success: True
