@@ -1,4 +1,55 @@
-# Pyhtonfinalproject
+## PythonFinalProject!
+
+### Project Overview
+
+Our goal is to provide a seamless backend infrastructure for the "Balance" application, allowing users to handle their expenses and income effortlessly. While backend development is our primary focus, frontend development will be handled by our frontend team.
+
+### System Specification
+
+- **Database:** MongoDB will manage our data efficiently.
+- **Server-side:** We're using Python for server-side development.
+- **Client-side:** React will power our client-side interface.
+
+### Application Features
+
+- **User Routes:** Includes registration, login, and profile update functionalities.
+- **Expense and Income Routes:** Supports creation, update, deletion, and retrieval of expense and income data.
+- **Visualization Route:** Allows users to extract data suitable for visualization using matplotlib.
+
+### Quality Assurance
+
+We're committed to delivering a high-quality product. Our developers will write comprehensive tests to ensure the system's performance meets our standards.
+
+### Documentation
+
+Quality documentation is crucial for maintaining transparency and ensuring future scalability. Detailed documentation, including design specifications and usage guidelines, can be found in the `docs` directory.
+
+### Contribution
+
+We welcome contributions and feedback! If you encounter any issues or
+have suggestions for improvement, please don't hesitate to create an issue in the repository.
+
+## Tree
+├── app\
+│   ├── Models\
+|   │   ├── budgetManagment.py\
+|   │   └── user.py\
+│   ├── routes\
+|   │   ├── budgetManagment_Router.py\
+|   │   ├── user_Router.py\
+|   │   └── visualization_Router.py\
+│   ├── services\
+|   │   ├── budgetManagment_services.py\
+|   │   ├── user_services.py\
+|   │   └── visualization_services.py\
+│   └── db\
+├── tests\
+│   ├── user_test.py\
+│   └── budgetManagment_test.py\
+├── README.md\
+├── requirements.txt\
+└── main.py
+ 
 
 ## Table of Contents
 
