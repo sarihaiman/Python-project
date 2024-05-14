@@ -32,16 +32,16 @@ have suggestions for improvement, please don't hesitate to create an issue in th
 ## Tree
 ├── app\
 │   ├── Models\
-|   │   ├── budgetManagment.py\
-|   │   └── user.py\
+│   │   ├── budgetManagment.py\
+│   │   └── user.py\
 │   ├── routes\
-|   │   ├── budgetManagment_Router.py\
-|   │   ├── user_Router.py\
-|   │   └── visualization_Router.py\
+│   │   ├── budgetManagment_Router.py\
+│   │   ├── user_Router.py\
+│   │   └── visualization_Router.py\
 │   ├── services\
-|   │   ├── budgetManagment_services.py\
-|   │   ├── user_services.py\
-|   │   └── visualization_services.py\
+│   │   ├── budgetManagment_services.py\
+│   │   ├── user_services.py\
+│   │   └── visualization_services.py\
 │   └── db\
 ├── tests\
 │   ├── user_test.py\
