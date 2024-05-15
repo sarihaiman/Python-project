@@ -4,7 +4,6 @@ from app.Services import User_crud as userFunc
 from app.models.user import User
 import unittest
 
-
 class TestHH(unittest.TestCase):
     def test_login(self):
         user = User(id=11111, name="aaa", password="s@sw.fdfg")

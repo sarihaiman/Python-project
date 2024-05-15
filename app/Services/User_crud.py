@@ -1,10 +1,12 @@
 from http.client import HTTPException
 from app.models.user import User
 from app.Services.db import users
-
+userId=None
 async def login(user: User):
     """The option for an existing user to log in to the system."""
     user=users.find_one({"name":user.name , "password":user.password})
+    global userId
+    userId=user['id']
     return user
 
 async def signUp(user: User):
