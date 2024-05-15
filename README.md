@@ -76,7 +76,7 @@ and the server side runs!
 Server Base URI:  <b>http://127.0.0.1:8000</b>
 Use this Basic url with the correct route listed below 
 see the api: <b>http://127.0.0.1:8000/docs</b>
-אם
+
 ### Available routes <a name = "routes"></a>
 
 ### User Routes

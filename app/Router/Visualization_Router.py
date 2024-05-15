@@ -6,6 +6,7 @@ Visualization_Router = APIRouter()
 app = Flask(__name__)
 @Visualization_Router.post('/plot')
 async def PostVisualization():
+    """Display data segmentation for the user regarding income and expenses."""
     try:
         a = await Visualization.plot()
         print(a)

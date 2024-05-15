@@ -73,3 +73,14 @@ Function: getBudget, Time: 2024-05-15 16:02:22, Success: True
 Function: getBudget, Time: 2024-05-15 16:02:58, Success: True
 Function: getBudget, Time: 2024-05-15 16:03:36, Success: True
 Function: getBudget, Time: 2024-05-15 16:04:32, Success: True
+Function: login, Time: 2024-05-15 16:16:19, Success: True
+Function: login, Time: 2024-05-15 16:17:12
+Function: getBudget, Time: 2024-05-15 16:17:15
+Function: login, Time: 2024-05-15 16:17:44
+Function: getBudget, Time: 2024-05-15 16:17:46
+Function: signUp, Time: 2024-05-15 16:19:57
+Function: signUp, Time: 2024-05-15 16:20:04
+Function: signUp, Time: 2024-05-15 16:20:09
+Function: signUp, Time: 2024-05-15 16:20:20
+Function: signUp, Time: 2024-05-15 16:20:52
+Function: getBudget, Time: 2024-05-15 16:21:30
