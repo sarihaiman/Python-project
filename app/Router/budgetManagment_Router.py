@@ -6,11 +6,25 @@ from app.models.budgetManagment import budgetManagment as budget
 budgetManagment_Router = APIRouter()
 
 @budgetManagment_Router.get('')
-async def getBudget(userid):
+async def getBudget():
     """Routing that allows the user to access details about their expenses and revenues."""
     try:
-        a = await budgetManagment_crud.getBudget(userid)
-        return { "expenses": a['expenses'] , "revenues" : a['revenues'], "userId": a['userId']}
+        s=""
+        my_array = await budgetManagment_crud.getBudget()
+        for i in my_array:
+            print(s)
+            s+="expenses: "
+            s+=((str)(i['expenses']))
+            s += " revenues: "
+            s += ((str)(i['revenues']))
+            s += " userId: "
+            s += ((str)(i['userId']))
+            s += " id: "
+            s += ((str)(i['id']))
+            s += " date: "
+            s += ((str)(i['date']))
+            s+=", "
+        return s
     except Exception:
         raise HTTPException(status_code=400, detail="oops... an error addToBudget")
 
@@ -33,10 +47,10 @@ async def updateBudget(budgetManagment: budget):
     return f"updateBudget"
 
 @budgetManagment_Router.delete('')
-async def deleteBudget(userid):
+async def deleteBudget(id):
     """Routing that enables deleting expenses and revenues for a specific user."""
     try:
-        await budgetManagment_crud.deleteBudget(userid)
+        await budgetManagment_crud.deleteBudget(id)
     except Exception:
         raise HTTPException(status_code=400, detail="oops... an error deleteBudget")
     return f"deleteBudget"

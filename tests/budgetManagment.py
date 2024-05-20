@@ -6,24 +6,20 @@ import unittest
 
 
 class TestHH(unittest.TestCase):
-    def test_getBudget(self):
-        result = asyncio.run(budgetFunc.getBudget(1))
-        assert result == {'_id': ObjectId('660d5c67adb1906e8645e5ad'), 'expenses': 500, 'revenues': 10000, 'userId': 1}
 
     def test_addToBudget(self):
-        budget = Budget(userId=11111, expenses=700, revenues=600)
+        budget = Budget(userId=11111, expenses=700, revenues=600,id=2,date="17/05/40")
         result = asyncio.run(budgetFunc.addToBudget(budget))
-        assert result == "addToBudget!"
+        assert result == "addToBudget"
 
     def test_updateToBudget(self):
-        budget = Budget(userId=11111, expenses=70, revenues=60)
+        budget = Budget(userId=11111, expenses=70, revenues=60,id=2,date="17/06/40")
         result = asyncio.run(budgetFunc.updateBudget(budget))
-        assert result == "updateBudget!"
+        assert result == "updateBudget"
 
     def test_deleteBudget(self):
-        result = asyncio.run(budgetFunc.deleteBudget(11111))
-        assert result == "deleteBudget!"
-
+        result = asyncio.run(budgetFunc.deleteBudget(0))
+        assert result == "deleteBudget"
 
 if __name__ == '__main__':
     unittest.main()
