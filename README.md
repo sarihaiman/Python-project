@@ -41,14 +41,15 @@ have suggestions for improvement, please don't hesitate to create an issue in th
 │   ├── services\
 │   │   ├── budgetManagment_services.py\
 │   │   ├── user_services.py\
+│   │   ├── db.py\
 │   │   └── visualization_services.py\
-│   └── db\
+│   ├── log.py\
+│   └── main.py\
 ├── tests\
 │   ├── user_test.py\
 │   └── budgetManagment_test.py\
 ├── README.md\
-├── requirements.txt\
-└── main.py
+└── requirements.txt\
  
 
 ## Table of Contents
