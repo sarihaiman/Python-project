@@ -49,7 +49,7 @@ have suggestions for improvement, please don't hesitate to create an issue in th
 │   ├── user_test.py\
 │   └── budgetManagment_test.py\
 ├── README.md\
-└── requirements.txt\
+└── requirements.txt
  
 
 ## Table of Contents
