@@ -90,3 +90,7 @@ Function: get_budget, Time: 2024-05-29 17:02:35
 Function: get_budget, Time: 2024-05-29 17:02:40
 Function: add_to_budget, Time: 2024-05-29 17:03:34
 Function: get_budget, Time: 2024-05-29 17:03:38
+Function: login, Time: 2024-05-29 17:16:15
+Function: get_budget, Time: 2024-05-29 17:16:22
+Function: login, Time: 2024-05-29 17:16:44
+Function: get_budget, Time: 2024-05-29 17:16:49

@@ -10,6 +10,7 @@ userId = None
 async def login(user_one: user):
     """The option for an existing user to log in to the system."""
     user_now = users.find_one({"name": user_one.name, "password": user_one.password})
+    print(user_now)
     global userId
     userId = user_now['id']
     return user_now

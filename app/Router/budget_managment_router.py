@@ -50,7 +50,7 @@ async def update_budget(budget_management: budget):
 
 
 @budget_managment_router.delete('')
-async def delete_budget(user_id:int):
+async def delete_budget(user_id: int):
     """Routing that enables deleting expenses and revenues for a specific user."""
     try:
         await budget_managment_crud.delete_budget(user_id)
